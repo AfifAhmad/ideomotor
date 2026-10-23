@@ -70,3 +70,14 @@ Repositori ini berfungsi sebagai dokumentasi terbuka atas eksperimen komputasi b
 Tujuannya adalah menyimpan data, menjelaskan alur kerja, mencatat hasil pengamatan, serta memungkinkan pihak lain meninjau dan mengevaluasi eksperimen tersebut secara kritis.
 
 Hasil yang tersedia saat ini sebaiknya dipandang sebagai pengamatan awal untuk membentuk dan menguji hipotesis, bukan sebagai bukti bahwa suatu metode desain protein telah terbukti.
+
+
+## Lisensi dan Penggunaan Data
+
+Dokumentasi dan materi orisinal dalam repositori ini dilisensikan berdasarkan [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), kecuali dinyatakan lain.
+
+Penggunaan yang diizinkan mencakup penyalinan, distribusi, adaptasi, penelitian, dan pemanfaatan materi untuk pengembangan serta pelatihan model machine learning, termasuk penggunaan komersial, dengan tetap memenuhi ketentuan lisensi dan memberikan atribusi yang sesuai.
+
+Pengguna bertanggung jawab memastikan bahwa materi pihak ketiga, perangkat lunak, dan keluaran prediksi yang disertakan dapat digunakan sesuai ketentuan masing-masing.
+
+Pemberian lisensi ini tidak menyatakan bahwa metode eksperimen telah tervalidasi secara ilmiah atau bahwa hasil prediksi memiliki fungsi biologis tertentu.
