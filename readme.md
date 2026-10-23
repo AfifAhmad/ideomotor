@@ -1,32 +1,72 @@
-# Matriks Ideomotor Direct-Pass untuk Desain Protein De Novo
+# Eksperimen Sekuens Protein Berbasis Ideomotor
 
-Sebuah bukti konsep (*proof-of-concept*) metode pembuatan sekuens protein *de novo* berakurasi tinggi menggunakan penyusunan matriks asam amino $8 \times 8$ berbasis intuisi spasial. Pendekatan ini memintas algoritma *denoising* interatif tradisional (seperti RFdiffusion dan ProteinMPNN) serta menghasilkan *helical bundle* yang stabil hanya dalam satu kali eksekusi (*single pass*) via ColabFold / AlphaFold2.
+## Gambaran Umum
 
-## 🎯 Performa Utama
+Repositori ini mendokumentasikan eksperimen eksploratif yang melibatkan pembuatan sekuens nukleotida melalui proses ideomotor, translasi sekuens menjadi protein, dan prediksi struktur protein secara komputasional.
 
-* **Skor pTM:** `0.62` (Melampaui ambang batas kestabilan struktur >0.60)
-* **Rata-rata pLDDT:** `88.54` (Tingkat kepercayaan per-residu sangat tinggi)
-* **Beban Komputasi:** Inferensi *single-pass* (Nol *denoising timesteps*, nol iterasi *sampling*)
+Eksperimen ini bertujuan mendokumentasikan hasil pengamatan serta menyediakan data untuk ditinjau dan dipelajari lebih lanjut.
 
-## 🔬 Tinjauan Metodologi
+Repositori ini tidak dimaksudkan sebagai bukti bahwa metode ideomotor merupakan metode desain protein yang valid, dapat direproduksi secara konsisten, atau memiliki keunggulan dibandingkan metode lain.
 
-Alur kerja biologis generatif standar sangat bergantung pada pemrosesan *sampling* berulang dan penggunaan GPU yang intensif untuk membersihkan *noise* sebelum menentukan identitas sekuens.
+## Isi Repositori
 
-Repositori ini menguji pendekatan **heuristik direct-pass**:
+* `sequence.dna.002.txt` — data sekuens nukleotida yang berkaitan dengan eksperimen.
+* `protein.png` — visualisasi struktur protein hasil prediksi.
+* `image/readme/` — gambar pendukung dokumentasi.
+* `readme.md` — dokumentasi eksperimen.
 
-1. Pola sekuens diturunkan melalui protokol pemetaan matriks $8 \times 8$ secara fisik.
-2. Sekuens dimasukkan secara langsung ke AlphaFold2/ColabFold tanpa pencarian *template* atau pengerjaan *backbone-first diffusion*.
-3. Struktur yang dihasilkan mencapai pemadatan inti hidrofobik yang rapat, tekanan torsi yang minim pada engsel *loop*, serta kestabilan global dalam satu kali coba.
+## Alur Eksperimen
 
-## 📊 Visualisasi Struktur
+Secara umum, eksperimen dilakukan melalui tahapan berikut:
 
-Model melipat menjadi *anti-parallel helical bundle* dengan jarak antar-heliks yang optimal serta wilayah engsel yang rileks:
+1. Menghasilkan sekuens nukleotida melalui proses ideomotor.
+2. Menerjemahkan sekuens nukleotida menjadi sekuens asam amino, jika memenuhi persyaratan translasi.
+3. Memasukkan sekuens protein ke perangkat lunak prediksi struktur protein.
+4. Mencatat hasil prediksi dan metrik yang tersedia.
+5. Mendokumentasikan hasil sebagai pengamatan awal untuk evaluasi lebih lanjut.
 
-- **Kesejajaran Helical Bundle:** Geometri paralel-antiparalel tanpa bentrokan posisi atom (*atom clashes*).
-- **Konformasi Loop:** Transisi engsel yang stabil dan tidak tegang.
+Proses pembuatan sekuens dalam eksperimen ini masih bersifat eksploratif dan belum ditetapkan sebagai metode baku.
+
+## Hasil Pengamatan Awal
+
+Dokumentasi eksperimen mencantumkan hasil prediksi struktur protein dengan metrik berikut.
+
+| Metrik                                                     | Nilai yang dilaporkan |
+| ---------------------------------------------------------- | --------------------: |
+| Predicted TM-score (pTM)                                   |                  0,62 |
+| Rata-rata predicted Local Distance Difference Test (pLDDT) |                 88,54 |
 
 ![1792762509970](image/readme/1792762509970.png)
 
----
+Nilai tersebut merupakan metrik yang dilaporkan oleh sistem prediksi komputasional. Nilai-nilai ini tidak secara langsung membuktikan bahwa protein dapat melipat dengan stabil dalam kondisi nyata, memiliki aktivitas biologis, atau menjalankan fungsi tertentu.
 
-*Dikembangkan sebagai bukti konsep open-access untuk inisialisasi sekuens yang ringkas serta efisiensi komputasi dalam biologi struktural.*
+Interpretasi hasil juga bergantung pada perangkat lunak, model, konfigurasi, dan sekuens yang digunakan.
+
+## Keterbatasan
+
+Eksperimen ini memiliki beberapa keterbatasan:
+
+* Prosedur pembuatan sekuens masih bersifat eksploratif dan mungkin sulit direproduksi secara konsisten.
+* Satu hasil prediksi belum cukup untuk menunjukkan hubungan umum antara proses pembuatan sekuens dan kualitas prediksi struktur.
+* Metrik kepercayaan prediksi tidak dengan sendirinya membuktikan kestabilan fisik atau fungsi biologis protein.
+* Belum ada klaim mengenai keunggulan metode ini dibandingkan metode desain protein yang telah tersedia.
+* Kesimpulan yang lebih kuat memerlukan pengulangan eksperimen, pembanding yang sesuai, dan validasi tambahan.
+
+## Pengembangan Selanjutnya
+
+Beberapa langkah yang dapat dilakukan untuk memperdalam eksperimen ini meliputi:
+
+* Mendokumentasikan sekuens nukleotida dan asam amino secara lengkap.
+* Mencatat perangkat lunak prediksi, versi model, konfigurasi, dan parameter yang digunakan.
+* Mengulangi eksperimen dengan prosedur yang terdokumentasi.
+* Membandingkan hasil dengan sekuens kontrol dan metode pembanding yang sesuai.
+* Melakukan analisis komputasional tambahan terhadap struktur yang diprediksi.
+* Mempertimbangkan validasi eksperimental apabila diperlukan dan memungkinkan.
+
+## Tujuan Repositori
+
+Repositori ini berfungsi sebagai dokumentasi terbuka atas eksperimen komputasi biologi yang masih bersifat eksploratif.
+
+Tujuannya adalah menyimpan data, menjelaskan alur kerja, mencatat hasil pengamatan, serta memungkinkan pihak lain meninjau dan mengevaluasi eksperimen tersebut secara kritis.
+
+Hasil yang tersedia saat ini sebaiknya dipandang sebagai pengamatan awal untuk membentuk dan menguji hipotesis, bukan sebagai bukti bahwa suatu metode desain protein telah terbukti.
