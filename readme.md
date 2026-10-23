@@ -2,82 +2,97 @@
 
 ## Gambaran Umum
 
-Repositori ini mendokumentasikan eksperimen eksploratif yang melibatkan pembuatan sekuens nukleotida melalui proses ideomotor, translasi sekuens menjadi protein, dan prediksi struktur protein secara komputasional.
+Repositori ini mendokumentasikan eksperimen eksploratif yang melibatkan pembuatan sekuens melalui proses ideomotor, penerjemahan sekuens nukleotida menjadi protein, serta prediksi struktur protein menggunakan perangkat komputasi.
 
-Eksperimen ini bertujuan mendokumentasikan hasil pengamatan serta menyediakan data untuk ditinjau dan dipelajari lebih lanjut.
+Eksperimen ini bertujuan mencatat proses dan hasil pengamatan yang dapat ditinjau lebih lanjut. Pendekatan yang digunakan belum divalidasi sebagai metode desain protein dan tidak diklaim memiliki keunggulan dibandingkan metode yang sudah ada.
 
-Repositori ini tidak dimaksudkan sebagai bukti bahwa metode ideomotor merupakan metode desain protein yang valid, dapat direproduksi secara konsisten, atau memiliki keunggulan dibandingkan metode lain.
+## Data dan Berkas
 
-## Isi Repositori
-
-* `sequence.dna.002.txt` — data sekuens nukleotida yang berkaitan dengan eksperimen.
-* `protein.png` — visualisasi struktur protein hasil prediksi.
-* `image/readme/` — gambar pendukung dokumentasi.
-* `readme.md` — dokumentasi eksperimen.
+| Berkas atau direktori    | Keterangan                                                 |
+| ------------------------ | ---------------------------------------------------------- |
+| `sequence.dna.002.txt` | Berkas sekuens nukleotida yang digunakan dalam eksperimen. |
+| `protein.png`          | Visualisasi struktur protein hasil prediksi.               |
+| `image/readme/`        | Gambar pendukung dokumentasi eksperimen.                   |
+| `readme.md`            | Dokumentasi eksperimen.                                    |
 
 ## Alur Eksperimen
 
-Secara umum, eksperimen dilakukan melalui tahapan berikut:
+Secara umum, proses yang didokumentasikan meliputi:
 
-1. Menghasilkan sekuens nukleotida melalui proses ideomotor.
-2. Menerjemahkan sekuens nukleotida menjadi sekuens asam amino, jika memenuhi persyaratan translasi.
-3. Memasukkan sekuens protein ke perangkat lunak prediksi struktur protein.
-4. Mencatat hasil prediksi dan metrik yang tersedia.
-5. Mendokumentasikan hasil sebagai pengamatan awal untuk evaluasi lebih lanjut.
+1. Pembuatan sekuens melalui proses ideomotor.
+2. Penerjemahan sekuens nukleotida menjadi sekuens asam amino, sesuai kerangka pembacaan dan kode genetik yang digunakan.
+3. Prediksi struktur protein menggunakan perangkat komputasi.
+4. Pencatatan metrik dan visualisasi hasil prediksi.
+5. Evaluasi awal terhadap hasil untuk menentukan kemungkinan penelitian lanjutan.
 
-Proses pembuatan sekuens dalam eksperimen ini masih bersifat eksploratif dan belum ditetapkan sebagai metode baku.
+Tahapan tersebut merupakan gambaran umum eksperimen. Rincian prosedur, parameter, dan perangkat lunak perlu didokumentasikan secara terpisah agar hasilnya dapat direproduksi.
 
-## Hasil Pengamatan Awal
+## Hasil Prediksi yang Dilaporkan
 
-Dokumentasi eksperimen mencantumkan hasil prediksi struktur protein dengan metrik berikut.
+Dokumentasi awal mencantumkan nilai berikut:
 
 | Metrik                                                     | Nilai yang dilaporkan |
 | ---------------------------------------------------------- | --------------------: |
 | Predicted TM-score (pTM)                                   |                  0,62 |
 | Rata-rata predicted Local Distance Difference Test (pLDDT) |                 88,54 |
 
-![1792762509970](image/readme/1792762509970.png)
+Nilai tersebut dicantumkan sebagai hasil prediksi komputasional yang dilaporkan, bukan sebagai hasil pengukuran eksperimental.
 
-Nilai tersebut merupakan metrik yang dilaporkan oleh sistem prediksi komputasional. Nilai-nilai ini tidak secara langsung membuktikan bahwa protein dapat melipat dengan stabil dalam kondisi nyata, memiliki aktivitas biologis, atau menjalankan fungsi tertentu.
+pTM memberikan indikasi kepercayaan model terhadap topologi struktur yang diprediksi, sedangkan pLDDT menggambarkan kepercayaan lokal terhadap struktur pada tingkat residu.
 
-Interpretasi hasil juga bergantung pada perangkat lunak, model, konfigurasi, dan sekuens yang digunakan.
+Kedua metrik tersebut tidak dengan sendirinya membuktikan bahwa protein memiliki kestabilan fisik, aktivitas biologis, atau fungsi tertentu dalam kondisi nyata.
+
+Interpretasi hasil perlu mempertimbangkan sekuens masukan, perangkat lunak, konfigurasi prediksi, dan informasi pendukung lainnya.
+
+## Visualisasi Struktur Protein
+
+Berkas berikut dipertahankan sebagai bagian dari dokumentasi visual eksperimen.
+
+![Visualisasi struktur protein hasil prediksi](protein.png)
+
+Gambar tersebut merupakan visualisasi hasil prediksi struktur protein. Bentuk yang terlihat tidak boleh langsung ditafsirkan sebagai bukti kestabilan atau fungsi biologis protein.
+
+Gambar pendukung lain yang tersimpan di direktori `image/readme/` juga merupakan bagian dari dokumentasi dan tetap dipertahankan.
 
 ## Keterbatasan
 
 Eksperimen ini memiliki beberapa keterbatasan:
 
-* Prosedur pembuatan sekuens masih bersifat eksploratif dan mungkin sulit direproduksi secara konsisten.
-* Satu hasil prediksi belum cukup untuk menunjukkan hubungan umum antara proses pembuatan sekuens dan kualitas prediksi struktur.
-* Metrik kepercayaan prediksi tidak dengan sendirinya membuktikan kestabilan fisik atau fungsi biologis protein.
-* Belum ada klaim mengenai keunggulan metode ini dibandingkan metode desain protein yang telah tersedia.
-* Kesimpulan yang lebih kuat memerlukan pengulangan eksperimen, pembanding yang sesuai, dan validasi tambahan.
+* Proses pembuatan sekuens masih bersifat eksploratif.
+* Reproduksibilitas proses belum ditetapkan.
+* Satu hasil prediksi belum cukup untuk menyimpulkan efektivitas suatu metode.
+* Metrik prediksi struktur bukan pengganti validasi eksperimental.
+* Belum tersedia dasar yang cukup untuk menyatakan bahwa pendekatan ini lebih unggul daripada metode pembanding.
+* Kesimpulan yang lebih kuat memerlukan prosedur terdokumentasi, pengulangan eksperimen, pembanding yang sesuai, dan analisis tambahan.
 
 ## Pengembangan Selanjutnya
 
-Beberapa langkah yang dapat dilakukan untuk memperdalam eksperimen ini meliputi:
+Beberapa kemungkinan pengembangan meliputi:
 
-* Mendokumentasikan sekuens nukleotida dan asam amino secara lengkap.
-* Mencatat perangkat lunak prediksi, versi model, konfigurasi, dan parameter yang digunakan.
+* Mendokumentasikan sekuens nukleotida dan protein secara lengkap.
+* Mencatat versi perangkat lunak, konfigurasi model, dan parameter prediksi.
+* Menyimpan hasil prediksi serta data pendukung dalam format yang dapat diperiksa.
 * Mengulangi eksperimen dengan prosedur yang terdokumentasi.
 * Membandingkan hasil dengan sekuens kontrol dan metode pembanding yang sesuai.
-* Melakukan analisis komputasional tambahan terhadap struktur yang diprediksi.
-* Mempertimbangkan validasi eksperimental apabila diperlukan dan memungkinkan.
-
-## Tujuan Repositori
-
-Repositori ini berfungsi sebagai dokumentasi terbuka atas eksperimen komputasi biologi yang masih bersifat eksploratif.
-
-Tujuannya adalah menyimpan data, menjelaskan alur kerja, mencatat hasil pengamatan, serta memungkinkan pihak lain meninjau dan mengevaluasi eksperimen tersebut secara kritis.
-
-Hasil yang tersedia saat ini sebaiknya dipandang sebagai pengamatan awal untuk membentuk dan menguji hipotesis, bukan sebagai bukti bahwa suatu metode desain protein telah terbukti.
-
+* Menguji apakah data eksperimen dapat dimanfaatkan untuk analisis atau pelatihan model *machine learning*.
+* Melakukan validasi eksperimental apabila diperlukan dan memungkinkan.
 
 ## Lisensi dan Penggunaan Data
 
-Dokumentasi dan materi orisinal dalam repositori ini dilisensikan berdasarkan [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), kecuali dinyatakan lain.
+Dokumentasi dan materi orisinal dalam repositori ini ditujukan untuk penggunaan terbuka dalam penelitian, analisis, dan pengembangan teknologi.
 
-Penggunaan yang diizinkan mencakup penyalinan, distribusi, adaptasi, penelitian, dan pemanfaatan materi untuk pengembangan serta pelatihan model machine learning, termasuk penggunaan komersial, dengan tetap memenuhi ketentuan lisensi dan memberikan atribusi yang sesuai.
+Materi yang haknya dimiliki atau dapat dilisensikan oleh pembuat repositori dapat digunakan berdasarkan lisensi **Creative Commons Attribution 4.0 International (CC BY 4.0)** setelah lisensi tersebut secara resmi diterapkan.
 
-Pengguna bertanggung jawab memastikan bahwa materi pihak ketiga, perangkat lunak, dan keluaran prediksi yang disertakan dapat digunakan sesuai ketentuan masing-masing.
+Penggunaan yang diperbolehkan berdasarkan lisensi mencakup penyalinan, distribusi, adaptasi, dan pemanfaatan materi untuk pengembangan serta pelatihan model *machine learning*, termasuk untuk tujuan komersial, dengan memenuhi ketentuan atribusi.
 
-Pemberian lisensi ini tidak menyatakan bahwa metode eksperimen telah tervalidasi secara ilmiah atau bahwa hasil prediksi memiliki fungsi biologis tertentu.
+Lisensi tidak otomatis mencakup materi pihak ketiga yang mungkin memiliki ketentuan penggunaan tersendiri. Pengguna bertanggung jawab memeriksa hak dan ketentuan yang berlaku atas setiap materi yang digunakan.
+
+Teks lengkap lisensi: https://creativecommons.org/licenses/by/4.0/
+
+## Tujuan Repositori
+
+Repositori ini merupakan catatan terbuka atas eksperimen komputasi biologi yang masih bersifat eksploratif.
+
+Tujuannya adalah mendokumentasikan data, menyimpan visualisasi, mencatat hasil pengamatan, dan memungkinkan pihak lain meninjau maupun mengembangkan penelitian lebih lanjut.
+
+Hasil yang tersedia sebaiknya diperlakukan sebagai pengamatan awal untuk pengujian hipotesis, bukan sebagai bukti bahwa metode desain protein tertentu telah terbukti efektif.
