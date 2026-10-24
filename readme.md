@@ -35,7 +35,9 @@ Dokumentasi awal mencantumkan nilai berikut:
 | ---------------------------------------------------------- | --------------------: |
 | Predicted TM-score (pTM)                                   |                  0,62 |
 | Rata-rata predicted Local Distance Difference Test (pLDDT) |                 88,54 |
-| Jumlah Percobaan                                           |                  ~201 |
+| Jumlah Percobaan                                           |                     ~ |
+
+![1792849222911](image/readme/1792849222911.png)
 
 Nilai tersebut dicantumkan sebagai hasil prediksi komputasional yang dilaporkan, bukan sebagai hasil pengukuran eksperimental.
 
