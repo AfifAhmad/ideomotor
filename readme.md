@@ -13,6 +13,8 @@ Eksperimen ini bertujuan mencatat proses dan hasil pengamatan yang dapat ditinja
 | `sequence.dna.002.txt` | Berkas sekuens nukleotida yang digunakan dalam eksperimen. |
 | `protein.png`          | Visualisasi struktur protein hasil prediksi.               |
 | `image/readme/`        | Gambar pendukung dokumentasi eksperimen.                   |
+| `image/dataset1/`      | Rangkaian eksperimen 1                   |
+| `image/dataset2/`      | Rangkaian eksperimen 2                   |
 | `readme.md`            | Dokumentasi eksperimen.                                    |
 
 ## Alur Eksperimen
@@ -31,6 +33,8 @@ Tahapan tersebut merupakan gambaran umum eksperimen. Rincian prosedur, parameter
 
 Dokumentasi awal mencantumkan nilai berikut:
 
+Dataset 1:
+
 | Metrik                                                     | Nilai yang dilaporkan |
 | ---------------------------------------------------------- | --------------------: |
 | Predicted TM-score (pTM)                                   |                  0,62 |
@@ -38,6 +42,16 @@ Dokumentasi awal mencantumkan nilai berikut:
 | Jumlah Percobaan                                           |                  ~202 |
 
 ![1792849222911](image/readme/1792849222911.png)
+
+Dataset 2 :
+
+| Metrik                                                     | Nilai yang dilaporkan |
+| ---------------------------------------------------------- | --------------------: |
+| Predicted TM-score (pTM)                                   |                  0,73 |
+| Rata-rata predicted Local Distance Difference Test (pLDDT) |                 88,60 |
+| Jumlah Percobaan                                           |                  ~202 |
+
+![1793268700065](image/readme/1793268700065.png)
 
 Nilai tersebut dicantumkan sebagai hasil prediksi komputasional yang dilaporkan, bukan sebagai hasil pengukuran eksperimental.
 
