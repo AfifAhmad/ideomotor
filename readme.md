@@ -13,8 +13,9 @@ Eksperimen ini bertujuan mencatat proses dan hasil pengamatan yang dapat ditinja
 | `sequence.dna.002.txt` | Berkas sekuens nukleotida yang digunakan dalam eksperimen. |
 | `protein.png`          | Visualisasi struktur protein hasil prediksi.               |
 | `image/readme/`        | Gambar pendukung dokumentasi eksperimen.                   |
-| `image/dataset1/`      | Rangkaian eksperimen 1                   |
-| `image/dataset2/`      | Rangkaian eksperimen 2                   |
+| `image/dataset1/`      | Rangkaian eksperimen 1. Dengan Ideomotor                  |
+| `image/dataset2/`      | Rangkaian eksperimen 2. Dengan Ideomotor                  |
+| `image/dataset3/`      | Rangkaian eksperimen 3. Dengan Monte Carlo                   |
 | `readme.md`            | Dokumentasi eksperimen.                                    |
 
 ## Alur Eksperimen
@@ -52,6 +53,16 @@ Dataset 2 :
 | Jumlah Percobaan                                           |                  ~202 |
 
 ![1793268700065](image/readme/1793268700065.png)
+
+Dataset 3 :
+
+| Metrik                                                     | Nilai yang dilaporkan |
+| ---------------------------------------------------------- | --------------------: |
+| Predicted TM-score (pTM)                                   |                 0.68 |
+| Rata-rata predicted Local Distance Difference Test (pLDDT) |                 87.89 |
+| Jumlah Percobaan                                           |                  ~202 |
+
+Untuk lihat bukti di dataset3/dataset3.pdf di halaman 187. Algoritma ada di folder tersebut.
 
 Nilai tersebut dicantumkan sebagai hasil prediksi komputasional yang dilaporkan, bukan sebagai hasil pengukuran eksperimental.
 
